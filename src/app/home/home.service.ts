@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { addApiKey } from '../../../add-apikey';
 
 @Injectable()
 export class HomeService {
@@ -14,8 +15,6 @@ export class HomeService {
   constructor(private http: HttpClient) {}
 
   getRecipes(): Observable<any> {
-    return this.http.get(
-      'https://api.spoonacular.com/recipes/complexSearch?apiKey=f00157bf7721455aa324b7f04d4d8e46'
-    );
+    return this.http.get(addApiKey('recipes/complexSearch'));
   }
 }
