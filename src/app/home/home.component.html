@@ -1,3 +1,5 @@
-<p>
-home works!
-</p>
+<ng-content>
+  <div *ngFor="let recipe of recipes">
+    {{ recipe.title }}
+  </div>
+</ng-content>
