@@ -15,8 +15,7 @@ export class HomeService {
 
   getRecipes(): Observable<any> {
     return this.http.get(
-      'https://api.spoonacular.com/recipes/complexSearch',
-      this.httpOptions
+      'https://api.spoonacular.com/recipes/complexSearch?apiKey=f00157bf7721455aa324b7f04d4d8e46'
     );
   }
 }
